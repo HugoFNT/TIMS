@@ -2,7 +2,7 @@
 #+Ajout d'un netwatch de supervision
 
 /system script add name=Autoreboot dont-require-permissions=yes
-:if ([/ping 8.8.8.8 interval=2 count=30] =0) do={
+:if ([/ping 8.8.8.8 interval=2 count=300] =0) do={
 log info "8.8.8.8 n'est pas joignable " ; /system reboot
 }
 
